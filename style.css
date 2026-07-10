@@ -1211,6 +1211,7 @@
         min-width: 12rem;
         background-color: var(--color-cream);
          top: 80px;
+         padding: var(--spacing-16);
          padding-bottom: 6rem;
          transition: all 0.2s ease-in-out;
     }
