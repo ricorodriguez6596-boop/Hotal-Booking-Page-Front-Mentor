@@ -801,6 +801,12 @@
     background-color: transparent;
     border: none;
     display: none;
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-close{
+   display: none;
 }
 
 .confirm-menu-box {
