@@ -1,0 +1,1271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+:root {
+    /* Color */
+    --color-blue: #586ac6;
+    --color-pink: #bf4a71;
+    --color-orange-light: #DD763C;
+    --color-orange-dark: #A13C1E;
+    --color-cream: #FBF6F0;
+    --color-red: #B4431B;
+    --color-yellow: #F4D989;
+    --color-whity: #FCFBF7;
+    --color-pure-white: #FFFFFF;
+    --color-black-dark: #2c2721;
+    --color-black-medium: #3e3428;
+    --color-black-light: #594b3b;
+    --color-black-lightest: #7a6a57;
+    --color-orange: #c25a2e;
+    --color-light-gray: rgb(222, 217, 217);
+
+    /* Font */
+    --font-family-fraunces: "Fraunces", serif;
+    --font-family-DMSans: "DM Sans", sans-serif;
+    --font-family-mono: "DM Mono", monospace;
+    /* Size */
+    --font-size-10px: 0.625rem;
+    --font-size-12px: 0.75rem;
+    --font-size-14px: 0.875rem;
+    --font-size-16px: 1rem;
+    --font-size-20px: 1.25rem;
+    --font-size-22px: 1.375rem;
+    --font-size-24px: 1.5rem;
+    --font-size-30px: 1.875rem;
+    --font-size-32px: 2rem;
+    --font-size-34px: 2.125rem;
+    --font-size-40px: 2.5rem;
+    --font-size-44px: 2.75rem;
+    --font-size-48px: 3rem;
+    --font-size-52px: 3.25rem;
+    --font-size-56px: 3.5rem;
+    --font-size-60px: 3.75rem;
+    --font-size-64px: 4rem;
+    --font-size-76px: 4.75rem;
+    --font-size-80px: 5rem;
+    --font-size-84px: 5.25rem;
+
+    /* Spacing */
+    --spacing-12: 0.75rem;
+    --spacing-16: 1rem;
+    --spacing-20: 1.25rem;
+    --spacing-24: 1.5rem;
+    --spacing-28: 1.75rem;
+    --spacing-32: 2rem;
+    --spacing-36: 2.25rem;
+    --spacing-40: 2.5rem;
+    --spacing-44: 2.75rem;
+    --spacing-48: 3rem;
+    --spacing-52: 3.25rem;
+    /* Mini-spacing */
+    --spacing-2: 0.125rem;
+    --spacing-4: 0.25rem;
+    --spacing-6: 0.375rem;
+    --spacing-8: 0.5rem;
+    --spacing-10: 0.625rem;
+
+}
+
+/* COMPONENTS--- */
+
+.btn-white {
+    cursor: pointer;
+    padding: var(--spacing-8);
+    padding-inline: var(--spacing-16);
+    border: 1px solid var(--color-light-gray);
+    border-radius: 100px;
+    background-color: var(--color-cream);
+    color: var(--color-black-dark);
+    transition: all 0.2s ease-in-out;
+    font-family: var(--font-family-DMSans);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    outline: 3px solid transparent;
+    outline-offset: 2px;
+}
+
+.btn-white:hover {
+    background-color: rgb(236, 234, 234);
+}
+
+.btn-white:active {
+    outline: 3px solid var(--color-red);
+    transition: none;
+}
+
+/* ============== */
+
+
+
+.btn-black {
+    cursor: pointer;
+    padding: var(--spacing-8);
+    padding-inline: var(--spacing-16);
+    border-radius: 100px;
+    background-color: var(--color-black-dark);
+    color: var(--color-pure-white);
+    transition: all 0.2s ease-in-out;
+    border: 1px solid var(--color-gray);
+    letter-spacing: 0.03em;
+    outline: 3px solid transparent;
+    outline-offset: 2px;
+
+}
+
+.btn-black:hover {
+    background-color: var(--color-black-light);
+}
+
+.btn-black:active {
+    outline: 3px solid var(--color-red);
+    transition: none;
+}
+
+/* =============== */
+
+
+/* Stay-Card */
+.stay-card {
+    transition: all 0.2s 0.2s ease-in-out;
+    transform: rotate(-5deg);
+    transform-origin: 50% 0%;
+    box-shadow: 0px 6px 8px rgba(56, 55, 55, 0.132);
+    border-radius: 20px;
+    background-color: var(--color-whity);
+    padding: var(--spacing-24);
+    display: flex;
+    flex-direction: column;
+}
+
+.stay-card-reciept {
+    padding-bottom: var(--spacing-16);
+    border-bottom: 1px dashed var(--color-light-gray);
+}
+
+.stay-reciept-box {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1;
+}
+
+.stay-reciept-box p {
+    font-size: var(--font-size-12px);
+    color: var(--color-black-lightest);
+    font-family: var(--font-family-mono);
+    letter-spacing: 0.03em;
+}
+
+.reciept-num {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-4);
+}
+
+.stay-card-heading {
+    color: var(--color-black-dark);
+    font-size: var(--font-size-22px);
+    font-family: var(--font-family-fraunces);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.stay-card-check {
+    padding-block: var(--spacing-20);
+    border-bottom: 1px dashed var(--color-light-gray);
+    display: flex;
+    gap: var(--spacing-16);
+    justify-content: space-between;
+    padding-inline: var(--spacing-32);
+}
+
+.stay-check-in,
+.stay-check-out {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+    align-items: center;
+    text-align: center;
+}
+
+.check-in-para,
+.check-out-para {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-12px);
+    color: var(--color-black-lightest);
+    margin-bottom: var(--spacing-6);
+    letter-spacing: 0.03em;
+}
+
+.check-in-time,
+.check-out-time {
+    font-family: var(--font-family-DMSans);
+    font-size: var(--font-size-14px);
+    color: var(--color-black-light);
+}
+
+.stay-card-check h2 {
+    font-family: var(--font-family-fraunces);
+    font-size: var(--font-size-34px);
+    color: var(--color-black-dark);
+    font-weight: 500;
+}
+
+.stay-card-prices {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+    padding-top: var(--spacing-16);
+    padding-bottom: var(--spacing-20);
+    border-bottom: 2px solid var(--color-black-lightest);
+    font-weight: 500;
+}
+
+.stay-card-prices div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stay-card-prices p {
+    font-size: var(--font-size-16px);
+    color: var(--color-black-dark);
+    font-family: var(--font-family-DMSans);
+}
+
+.stay-card-prices .stay-prices {
+    font-family: var(--font-family-mono);
+}
+
+.stay-total {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+    padding-top: var(--spacing-16);
+}
+
+.stay-total-price,
+.stay-card-barcode {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stay-total-price p {
+    font-size: var(--font-size-14px);
+    color: var(--color-black-lightest);
+    font-family: var(--font-family-mono);
+    letter-spacing: 0.03em;
+}
+
+.stay-total-price h4 {
+    font-family: var(--font-family-fraunces);
+    color: var(--color-black-dark);
+    font-size: var(--font-size-24px);
+    font-weight: 500;
+}
+
+.stay-card-barcode {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stay-card-barcode p {
+    font-size: var(--font-size-12px);
+    font-family: var(--font-family-mono);
+    color: var(--color-black-lightest);
+    letter-spacing: 0.03em;
+}
+
+.stay-card-barcode-img {
+    width: 100px;
+}
+
+.stay-card-barcode-img img {
+    width: 100%;
+}
+
+/* ================= */
+
+
+
+/* Welcome-Card */
+.welcome-card {
+    transition: all 0.2s 0.2s ease-in-out;
+    transform: rotate(5deg);
+    transform-origin: 50% 0%;
+    box-shadow: 0px 12px 30px rgba(166, 34, 34, 0.416);
+    border-radius: 20px;
+    padding: var(--spacing-24);
+    background: linear-gradient(240deg, var(--color-orange-light), var(--color-orange-dark)80%);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-48);
+    justify-content: space-between;
+}
+
+.welcome-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+    padding-block: var(--spacing-12);
+    border-top: 2px dashed #fcfbf755;
+}
+
+.welcome-card-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-12);
+}
+
+.welcome-card-heading p {
+    font-size: var(--font-size-12px);
+    color: var(--color-whity);
+    font-family: var(--font-family-DMSans);
+    letter-spacing: 0.03em;
+}
+
+.welcome-card-note {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12);
+}
+
+.welcome-card-note p {
+    font-size: var(--font-size-22px);
+    font-family: var(--font-family-fraunces);
+    color: var(--color-yellow);
+    font-style: italic;
+}
+
+.welcome-card-note h2 {
+    font-size: var(--font-size-40px);
+    color: var(--color-whity);
+    font-family: var(--font-family-fraunces);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.welcome-card-para {
+    font-family: var(--font-family-DMSans);
+    color: var(--color-whity);
+    font-size: var(--font-size-14px);
+}
+
+.welcome-card-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-card-footer p {
+    font-size: var(--font-size-12px);
+    color: var(--color-whity);
+    font-family: var(--font-family-mono);
+    letter-spacing: 0.03em;
+}
+
+.welcome-card-footer h3 {
+    font-size: var(--font-size-22px);
+    color: var(--color-whity);
+    font-family: var(--font-family-fraunces);
+    font-weight: 500;
+}
+
+/* ================= */
+
+
+
+/* Weather-Card */
+.weather-card {
+    max-width: 14rem;
+    border-radius: 12px;
+    padding: var(--spacing-12);
+    background-color: var(--color-yellow);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+    position: relative;
+    overflow: hidden;
+}
+
+.weather-sunny-txt,
+.weather-today {
+    font-family: var(--font-family-mono);
+    color: var(--color-black-light);
+    font-size: var(--font-size-12px);
+}
+
+.weather-sunny-txt {
+    font-family: var(--font-family-DMSans);
+
+}
+
+.weather-card h3 {
+    font-family: var(--font-family-fraunces);
+    font-size: var(--font-size-30px);
+    font-weight: 500;
+    color: var(--color-black-dark);
+}
+
+.weather-icon {
+    position: absolute;
+    top: -24px;
+    right: -20px;
+}
+
+/* ================ */
+
+
+
+
+/* Arrival-Card */
+.arrival-card {
+    border-radius: 12px;
+    background-color: var(--color-whity);
+    padding: var(--spacing-16);
+    border: 1px solid var(--color-light-gray);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+}
+
+.arrival-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrival-card-img-area {
+    display: flex;
+    gap: var(--spacing-10);
+    align-items: center;
+}
+
+.arrival-card-img-area p {
+    font-family: var(--font-family-mono);
+    color: var(--color-red);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    font-size: var(--font-size-16px);
+}
+
+.arrival-card-img {
+    background-color: var(--color-red);
+    padding: var(--spacing-8);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrival-card-num {
+    font-family: var(--font-family-fraunces);
+    color: var(--color-red);
+    font-size: var(--font-size-24px);
+}
+
+.arrival-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+}
+
+.arrival-card-heading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-10);
+}
+
+.arrival-card-heading h3 {
+    font-size: var(--font-size-22px);
+    font-family: var(--font-family-fraunces);
+    font-weight: 500;
+    color: var(--color-black-dark);
+}
+
+.arrival-card-heading p {
+    font-family: var(--font-family-DMSans);
+    color: var(--color-black-lightest);
+    font-size: var(--font-size-12px);
+}
+
+.arrival-card-para {
+    color: var(--color-black-light);
+    font-family: var(--font-family-DMSans);
+    font-size: var(--font-size-14px);
+}
+
+/* ==================== */
+
+
+
+
+
+/* WiFi-Card */
+.wifi-card {
+    border-radius: 12px;
+    padding: var(--spacing-16);
+    border: 1px solid var(--color-light-gray);
+    background-color: var(--color-whity);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+}
+
+.wifi-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wifi-card-img-area {
+    display: flex;
+    gap: var(--spacing-10);
+    align-items: center;
+}
+
+.wifi-card-img {
+    background-color: var(--color-blue);
+    padding: var(--spacing-8);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wifi-card-img-area p {
+    font-family: var(--font-family-mono);
+    color: var(--color-blue);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    font-size: var(--font-size-16px);
+}
+
+.wifi-card-num {
+    font-family: var(--font-family-fraunces);
+    color: var(--color-blue);
+    font-size: var(--font-size-24px);
+}
+
+.wifi-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+}
+
+.wifi-card-heading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-10);
+}
+
+.wifi-card-heading h3 {
+    font-size: var(--font-size-22px);
+    font-family: var(--font-family-fraunces);
+    font-weight: 500;
+    color: var(--color-black-dark);
+}
+
+.wifi-card-heading p {
+    font-family: var(--font-family-DMSans);
+    color: var(--color-black-lightest);
+    font-size: var(--font-size-12px);
+}
+
+.wifi-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.wifi-card-network {
+    background-color: #F2EFEA;
+    border-radius: 8px;
+    padding-block: var(--spacing-8);
+    padding-inline: var(--spacing-10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wifi-card-network-txt {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-12px);
+    color: var(--color-black-lightest);
+    letter-spacing: 0.1em;
+}
+
+.wifi-card-network-name {
+    color: var(--color-black-dark);
+    font-size: var(--font-size-12px);
+    font-family: var(--font-family-DMSans);
+    letter-spacing: 0.03em;
+}
+
+.wifi-card-password-details {
+    background-color: #F2EFEA;
+    border-radius: 8px;
+    padding-block: var(--spacing-8);
+    padding-inline: var(--spacing-10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wifi-card-password-txt {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-12px);
+    color: var(--color-black-lightest);
+    letter-spacing: 0.1em;
+}
+
+.wifi-card-password-area {
+    display: flex;
+    gap: var(--spacing-10);
+    align-items: center;
+}
+
+.wifi-card-password {
+    color: var(--color-black-dark);
+    font-size: var(--font-size-12px);
+    font-family: var(--font-family-DMSans);
+    letter-spacing: 0.03em;
+}
+
+.wifi-card-copy-btn {
+    border: 1px solid var(--color-light-gray);
+    border-radius: 100px;
+    font-size: 0.563rem;
+    padding-block: var(--spacing-2);
+    padding-inline: var(--spacing-6);
+    font-family: var(--font-family-DMSans);
+    letter-spacing: 0.1em;
+    color: var(--color-black-light);
+    cursor: pointer;
+    background-color: #F2EFEA;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.wifi-card-copy-btn:hover {
+    background-color: rgb(233, 231, 231);
+}
+
+.wifi-card-copy-btn:active {
+    outline: 2px solid var(--color-red);
+    transition: none;
+
+}
+
+/* =============== */
+
+
+
+
+/*Breakfast-Card */
+.breakfast-card {
+    border-radius: 12px;
+    background-color: var(--color-whity);
+    padding: var(--spacing-16);
+    border: 1px solid var(--color-light-gray);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+}
+
+.breakfast-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breakfast-card-img-area {
+    display: flex;
+    gap: var(--spacing-10);
+    align-items: center;
+}
+
+.breakfast-card-img-area p {
+    font-family: var(--font-family-mono);
+    color: var(--color-pink);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    font-size: var(--font-size-16px);
+}
+
+.breakfast-card-img {
+    background-color: var(--color-pink);
+    padding: var(--spacing-8);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breakfast-card-num {
+    font-family: var(--font-family-fraunces);
+    color: var(--color-pink);
+    font-size: var(--font-size-24px);
+}
+
+.breakfast-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+}
+
+.breakfast-card-heading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-10);
+}
+
+.breakfast-card-heading h3 {
+    font-size: var(--font-size-22px);
+    font-family: var(--font-family-fraunces);
+    font-weight: 500;
+    color: var(--color-black-dark);
+}
+
+.breakfast-card-heading p {
+    font-family: var(--font-family-DMSans);
+    color: var(--color-black-lightest);
+    font-size: var(--font-size-12px);
+}
+
+.breakfast-card-para {
+    color: var(--color-black-light);
+    font-family: var(--font-family-DMSans);
+    font-size: var(--font-size-14px);
+}
+
+/* ================ */
+
+
+/* COMPONENTS--- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Confirm-Page---------- */
+.confirm-page {
+    background-color: var(--color-cream);
+    display: flex;
+    overflow: hidden;
+}
+
+
+/* Aside-------------- */
+.confirm-page-menu {
+    flex: 1;
+    min-width: 14rem;
+    max-width: 16rem;
+    display: flex;
+    gap: var(--spacing-16);
+    flex-direction: column;
+    padding: var(--spacing-16);
+    border-right: 2px solid var(--color-light-gray);
+}
+
+.confirm-menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+
+.site-logo {
+    padding-bottom: var(--spacing-12);
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+.hamburger-btn {
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+.confirm-menu-box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.menu-box-option {
+    display: flex;
+    justify-content: space-between;
+    padding-block: var(--spacing-10);
+    padding-inline: var(--spacing-12);
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    outline: 3px solid transparent;
+    align-items: center;
+}
+
+.menu-box-option div {
+    display: flex;
+    gap: var(--spacing-12);
+    align-items: center;
+}
+
+
+.menu-box-option:hover {
+    background-color: var(--color-pure-white);
+}
+
+.menu-box-option:active {
+    outline: 3px solid var(--color-red);
+    transition: none;
+}
+
+.menu-box-option:hover .confirm-menu-icons {
+    stroke: var(--color-black-dark);
+}
+
+.menu-box-option:hover .breakfast-icon {
+    fill: var(--color-black-dark);
+}
+
+.box-option-para {
+    color: var(--color-black-light);
+    font-family: var(--font-family-DMSans);
+    font-size: var(--font-size-14px);
+    font-weight: 500;
+}
+.one{
+    color: var(--color-black-light);
+    font-family: var(--font-family-DMSans);
+    font-size: var(--font-size-14px);
+    font-weight: 500;
+    border-radius: 100px;
+    background-color: var(--color-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 16px;
+    max-width: 16px; 
+    padding: var(--spacing-8);
+    color: var(--color-whity);
+}
+
+.menu-box-option:hover .box-option-para {
+    color: var(--color-black-dark);
+}
+
+
+.menu-weather-info {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+}
+
+.menu-location-copyright {
+    border-top: 1px dashed var(--color-light-gray);
+    padding-block: var(--spacing-16);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-10);
+}
+
+.location-copyright {
+    padding-block: var(--spacing-12);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12);
+    border-top: 1px dashed var(--color-black-lightest);
+}
+
+.menu-location-copyright p {
+    font-size: var(--font-size-12px);
+    font-family: var(--font-family-mono);
+    color: var(--color-black-lightest);
+    letter-spacing: 0.06em;
+}
+
+/* Aside-Complete-------------- */
+
+
+
+
+
+/* Confirm-Content-Section-------------- */
+.confirm-content-section {
+    padding: var(--spacing-36);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-52);
+    width: 100%;
+    flex: 5;
+    max-width: 1600px;
+    margin-inline: auto;
+}
+
+.confirm-content-head {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.content-head-welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--spacing-36);
+    flex-wrap: wrap;
+}
+
+.confirm-booking {
+    font-size: var(--font-size-14px);
+    font-family: var(--font-family-mono);
+    color: var(--color-black-lightest);
+    letter-spacing: 0.03em;
+}
+
+.content-head-welcome h1 {
+    color: var(--color-black-dark);
+    font-family: var(--font-family-fraunces);
+    font-size: var(--font-size-32px);
+    font-weight: 500;
+
+}
+
+.content-head-welcome h1::after {
+    content: ' Lucia.';
+    color: var(--color-red);
+    font-style: italic;
+}
+
+.content-head-btns {
+    display: flex;
+    gap: var(--spacing-16);
+    flex-wrap: wrap;
+}
+
+.confirm-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-10);
+    align-items: center;
+}
+
+.confirm-card-box {
+    max-width: 56rem;
+    display: flex;
+    gap: var(--spacing-28);
+    background: url(assets/images/illustration-sun.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.confirm-card-box:hover .stay-card {
+    transform: translatex(-70px) rotate(5deg);
+}
+
+.confirm-card-box:hover .welcome-card {
+    transform: translatex(70px) rotate(-5deg);
+}
+
+.stay-card,
+.welcome-card {
+    flex: 1;
+
+}
+
+.hover-to-fan {
+    display: flex;
+    gap: var(--spacing-12);
+}
+
+.hover-to-fan p {
+    font-family: var(--font-family-mono);
+    color: var(--color-black-dark);
+    font-size: var(--font-size-12px);
+    align-items: center;
+    letter-spacing: 0.03em;
+}
+
+
+.confirm-guest-guid-cards {
+    display: flex;
+    gap: var(--spacing-20);
+}
+
+.arrival-card,
+.wifi-card,
+.breakfast-card {
+    flex: 1;
+}
+
+/* Confirm-Content-Section-Complete------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1100px) {
+    .confirm-page-menu {
+        padding: var(--spacing-12);
+    }
+
+
+    .confirm-content-section {
+        padding: var(--spacing-32);
+
+    }
+
+    .confirm-booking {
+        font-size: var(--font-size-12px);
+    }
+
+    .content-head-welcome h1 {
+        font-size: var(--font-size-30px);
+    }
+
+    .confirm-card-box {
+        gap: var(--spacing-24);
+    }
+
+
+
+    /* Stay-Card */
+    .stay-card {
+        border-radius: 16px;
+        padding: var(--spacing-20);
+    }
+
+    .stay-card-reciept {
+        padding-bottom: var(--spacing-12);
+    }
+
+    .stay-reciept-box p {
+        font-size: var(--font-size-10px);
+    }
+
+    .stay-card-heading {
+        font-size: var(--font-size-20px);
+    }
+
+    .stay-card-check {
+        padding-block: var(--spacing-16);
+        gap: var(--spacing-12);
+        padding-inline: var(--spacing-28);
+    }
+
+    .stay-check-in,
+    .stay-check-out {
+        gap: var(--spacing-4);
+    }
+
+    .check-in-para,
+    .check-out-para {
+        font-size: var(--font-size-10px);
+        margin-bottom: var(--spacing-4);
+    }
+
+    .check-in-time,
+    .check-out-time {
+        font-size: var(--font-size-12px);
+    }
+
+    .stay-card-check h2 {
+        font-size: var(--font-size-30px);
+    }
+
+    .stay-card-prices {
+        gap: var(--spacing-12);
+        padding-top: var(--spacing-12);
+        padding-bottom: var(--spacing-16);
+    }
+
+    .stay-card-prices p {
+        font-size: var(--font-size-12px);
+    }
+
+    .stay-total {
+        gap: var(--spacing-20);
+        padding-top: var(--spacing-12);
+    }
+
+    .stay-total-price p {
+        font-size: var(--font-size-12px);
+    }
+
+    .stay-total-price h4 {
+        font-size: var(--font-size-20px);
+    }
+
+
+
+    /* Welcome-Card */
+    .welcome-card {
+        padding: var(--spacing-20);
+        gap: var(--spacing-44);
+        border-radius: 16px;
+    }
+
+    .welcome-card-content {
+        gap: var(--spacing-20);
+        padding-block: var(--spacing-10);
+    }
+
+    .welcome-card-heading p {
+        font-size: var(--font-size-10px);
+    }
+
+    .welcome-card-note {
+        gap: var(--spacing-10);
+    }
+
+    .welcome-card-note p {
+        font-size: var(--font-size-20px);
+    }
+
+    .welcome-card-note h2 {
+        font-size: var(--font-size-34px);
+    }
+
+    .welcome-card-para {
+        font-size: var(--font-size-12px);
+    }
+
+    .welcome-card-footer p {
+        font-size: var(--font-size-10px);
+    }
+
+    .welcome-card-footer h3 {
+        font-size: var(--font-size-20px);
+    }
+
+
+
+    /* Weather-Card */
+    .weather-card {
+        gap: var(--spacing-4);
+    }
+
+    .weather-sunny-txt,
+    .weather-today {
+        font-size: var(--font-size-10px);
+    }
+
+    .weather-card h3 {
+        font-size: var(--font-size-24px);
+    }
+
+    .confirm-guest-guid-cards {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width:950px) {
+    .confirm-page {
+        flex-direction: column;
+    }
+
+    .site-logo {
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+    }
+
+    .confirm-page-menu {
+        border: none;
+        max-width: 100%;
+    }
+
+    .confirm-menu-content {
+        position: absolute;
+        z-index: 100;
+        height: 100%;
+        width: 40%;
+        background-color: var(--color-cream);
+         top: 80px;
+         padding-bottom: 6rem;
+         transition: all 0.2s ease-in-out;
+    }
+
+    .ham-active{
+        transform: translateX(-1200px);
+        
+    }
+
+
+    .hamburger-btn {
+        background-color: transparent;
+        border: none;
+        display: block;
+    }
+
+
+    .confirm-content-section {
+        padding: var(--spacing-28);
+    }
+}
+
+@media (max-width:730px) {
+    .confirm-card-box {
+        flex-direction: column-reverse;
+        background: none;
+        gap: var(--spacing-40);
+    }
+
+    .confirm-content-section {
+        padding-top: var(--spacing-16);
+    }
+
+    .hover-to-fan {
+        display: none;
+    }
+
+    .stay-card {
+        transform: rotate(-2deg);
+        transform-origin: 50% 50%;
+    }
+
+    .welcome-card {
+        transform: rotate(2deg);
+        transform-origin: 50% 50%;
+    }
+
+    .confirm-card-box:hover .stay-card {
+        transform: rotate(-2deg);
+    }
+
+    .confirm-card-box:hover .welcome-card {
+        transform: rotate(2deg);
+    }
+
+    .content-head-welcome {
+        gap: var(--spacing-16);
+    }
+}
