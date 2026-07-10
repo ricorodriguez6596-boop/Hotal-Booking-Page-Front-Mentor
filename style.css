@@ -1202,7 +1202,7 @@
     .site-logo {
         display: flex;
         justify-content: space-between;
-        position: sticky;
+
     }
 
     .confirm-page-menu {
