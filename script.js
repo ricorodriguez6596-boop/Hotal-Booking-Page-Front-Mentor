@@ -10,18 +10,12 @@ hamburgerBtn.addEventListener('click',()=>{
         confirmMenuContent.style.transform='translatex(0px)'
         hamburgerOpen.style.display='none'
         hamburgerClose.style.display='block'
-        // confirmMenuContent.style.height='100vh'
     extendMenu=true
     }else{
         confirmMenuContent.style.transform='translatex(-1200px)'
         hamburgerOpen.style.display='block'
         hamburgerClose.style.display='none'
-        // confirmMenuContent.style.height='100vh'
     extendMenu=false
     }
-    messegeCheck()
 })  
 
-let messegeCheck=()=>{
-    
-}

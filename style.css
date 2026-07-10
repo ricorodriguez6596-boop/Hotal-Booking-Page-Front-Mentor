@@ -1009,6 +1009,10 @@
     align-items: center;
     letter-spacing: 0.03em;
 }
+.hover-to-fan img{
+    width: var(--spacing-10);
+    object-fit: contain;
+}
 
 
 .confirm-guest-guid-cards {
